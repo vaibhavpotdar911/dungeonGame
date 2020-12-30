@@ -106,8 +106,13 @@ def game_loop():
         else:
             input("\n Walls are hard! Dont run into them")
     else:
-        if input('Play again? [Y/n]').lower() != "n":
+        playAgain = input('Play again? [Y/n]')
+        if playAgain.lower() == "y":
             game_loop()
+        elif playAgain.lower() == "n":
+            print('Thank you for Playing!')
+        else:
+            print("Incorrect selection!")
 
 clear_screen()
 print("Welcome to the Dungeon")
